@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Interactive Quiz Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="quiz-container" id="quizBox">
+        <div class="quiz-header">
+            <div class="progress-wrapper">
+                <span id="progressText">Question 1 of 4</span>
+                <div class="progress-bar"><div id="progressFill"></div></div>
+            </div>
+            <div class="live-score">Score: <span id="currentScore">0</span></div>
+        </div>
+
+        <div class="quiz-body">
+            <h2 id="questionText">Loading Question...</h2>
+            <p id="questionHint" class="hint-text"></p>
+            <div id="answerOptions" class="options-container"></div>
+        </div>
+
+        <div class="quiz-footer">
+            <button id="submitBtn">Submit Answer</button>
+            <button id="nextBtn" style="display: none;">Next Question</button>
+        </div>
+    </div>
+
+    <div class="quiz-container" id="resultBox" style="display: none;">
+        <h2>Quiz Completed!</h2>
+        <div class="score-summary">
+            <p>Your Final Score is</p>
+            <div class="final-score-badge"><span id="finalScore">0</span>%</div>
+            <p id="scoreFeedback"></p>
+        </div>
+        <button id="restartBtn">Retake Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
